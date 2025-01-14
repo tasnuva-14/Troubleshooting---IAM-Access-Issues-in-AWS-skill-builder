@@ -18,21 +18,9 @@ The **trusted relationship** is defined in the role’s **assume role policy** (
 - Navigate to the IAM role in the AWS Management Console.
 - In the **Trust relationships** tab, update the trust policy to include the **IAM user**.
 
-**Example Trust Policy (JSON)**:
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::account-id:user/IAM-username"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-```
+**Update Trust Policy (JSON)**:
+
+![Updating trust policy](correct principal.PNG)
 
 This allows the IAM user to assume the IAM role.
 
@@ -43,26 +31,21 @@ The IAM user must have explicit permissions to assume the role. If the role’s 
 - Ensure that the IAM user has the `sts:AssumeRole` permission in their IAM policy.
 - Update or create a policy that grants the necessary permission.
 
-**Example IAM User Policy (JSON)**:
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": "sts:AssumeRole",
-      "Resource": "arn:aws:iam::account-id:role/RoleName"
-    }
-  ]
-}
-```
+**Selecting desired IAM User Policy (JSON)**:
+
+![IAM user policy](IAM policy.PNG)
+
+**Attaching desired IAM User Policy (JSON)**:
+
+![IAM user policy](policy attached.PNG)
 
 ### **4. Testing and Verification**
 After making the changes to the trust policy and user permissions, the IAM user was able to assume the role and establish a session in an EC2 instance.
+
+![Success](successful role switch.PNG)
 
 ### **5. Conclusion**
 By fixing the trust relationship in the IAM role and ensuring the IAM user had the appropriate permissions, the issue was resolved, and the IAM user was able to assume the role successfully.
 
 ---
 
-This README captures the process for troubleshooting and resolving the IAM role assumption issue. Let me know if you need any additional information! 😊

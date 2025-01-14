@@ -22,7 +22,8 @@ The **trusted relationship** is defined in the role’s **assume role policy** (
 
 Updating the principal of trust relationships:
 
-![Updating trust policy](correct principal.PNG)
+![Alt text](.correct principal.PNG)
+
 
 This allows the IAM user to assume the IAM role.
 

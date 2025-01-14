@@ -22,7 +22,7 @@ The **trusted relationship** is defined in the role’s **assume role policy** (
 
 Updating the principal of trust relationships:
 
-![Alt text]([correct principal.PNG](https://github.com/tasnuva-14/Troubleshooting---IAM-Access-Issues-in-AWS-skill-builder/blob/main/correct%20principal.PNG))
+![Alt text](https://github.com/tasnuva-14/Troubleshooting---IAM-Access-Issues-in-AWS-skill-builder/blob/main/correct%20principal.PNG)
 
 
 This allows the IAM user to assume the IAM role.
@@ -44,14 +44,14 @@ Check which policy allows our desired actions:
 
 Attch the policy to the IAM user:
 
-![IAM user policy]([policy attached.PNG](https://github.com/tasnuva-14/Troubleshooting---IAM-Access-Issues-in-AWS-skill-builder/blob/main/policy%20attached.PNG))
+![IAM user policy](https://github.com/tasnuva-14/Troubleshooting---IAM-Access-Issues-in-AWS-skill-builder/blob/main/policy%20attached.PNG)
 
 ### **4. Testing and Verification**
 After making the changes to the trust policy and user permissions, the IAM user was able to assume the role and establish a session in an EC2 instance.
 
 Successfully connected:
 
-![Success]([successful role switch.PNG](https://github.com/tasnuva-14/Troubleshooting---IAM-Access-Issues-in-AWS-skill-builder/blob/main/successful%20role%20switch.PNG))
+![Success](https://github.com/tasnuva-14/Troubleshooting---IAM-Access-Issues-in-AWS-skill-builder/blob/main/successful%20role%20switch.PNG)
 
 ### **5. Conclusion**
 By fixing the trust relationship in the IAM role and ensuring the IAM user had the appropriate permissions, the issue was resolved, and the IAM user was able to assume the role successfully.

@@ -20,6 +20,8 @@ The **trusted relationship** is defined in the role’s **assume role policy** (
 
 **Update Trust Policy (JSON)**:
 
+Updating the principal of trust relationships:
+
 ![Updating trust policy](correct principal.PNG)
 
 This allows the IAM user to assume the IAM role.
@@ -33,14 +35,20 @@ The IAM user must have explicit permissions to assume the role. If the role’s 
 
 **Selecting desired IAM User Policy (JSON)**:
 
+Check which policy allows our desired actions:
+
 ![IAM user policy](IAM policy.PNG)
 
 **Attaching desired IAM User Policy (JSON)**:
+
+Attch the policy to the IAM user:
 
 ![IAM user policy](policy attached.PNG)
 
 ### **4. Testing and Verification**
 After making the changes to the trust policy and user permissions, the IAM user was able to assume the role and establish a session in an EC2 instance.
+
+Successfully connected:
 
 ![Success](successful role switch.PNG)
 

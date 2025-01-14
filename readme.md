@@ -22,7 +22,7 @@ The **trusted relationship** is defined in the role’s **assume role policy** (
 
 Updating the principal of trust relationships:
 
-![Alt text](.correct principal.PNG)
+![Alt text](correct principal.PNG)
 
 
 This allows the IAM user to assume the IAM role.
@@ -38,7 +38,7 @@ The IAM user must have explicit permissions to assume the role. If the role’s 
 
 Check which policy allows our desired actions:
 
-![IAM user policy](IAM policy.PNG)
+![IAM user policy](https://github.com/tasnuva-14/Troubleshooting---IAM-Access-Issues-in-AWS-skill-builder/blob/main/IAM%20policy.PNG)
 
 **Attaching desired IAM User Policy (JSON)**:
 
